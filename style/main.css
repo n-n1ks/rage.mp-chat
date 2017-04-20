@@ -1,0 +1,98 @@
+/* Fonts */
+@font-face {
+	font-family: Play;
+	src: url('fonts/Play-Regular.ttf');
+}
+
+/* Variables */
+:root {
+	--chat-width:		35vw;
+	--chat-height:		30vh;
+
+	--input-width:		35vw;
+	--input-height:		3vh;
+
+	--font-color:      	#fff;
+	--input-font-color:	#fff;
+}
+
+* { margin: 0; padding: 0; }
+		
+html, body {
+	font-family: Play;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	-webkit-user-select: none;
+	color: var(--font-color);
+
+	width: 100vw;
+	height: 100vh;
+}
+
+#chat {
+	width: var(--chat-width);
+	height: var(--chat-height);
+	
+	display: table-cell;
+	vertical-align: bottom;
+
+	padding: 0.5vw;
+}
+
+#chat_messages {
+	height: auto;
+	max-height: var(--chat-height);
+	overflow: hidden;
+}
+
+.chat_message {
+	width: 100%;
+	word-break: break-all;
+
+	text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    -webkit-font-smoothing: antialiased;
+	font-size: 1.1vw;
+	line-height: 1.35vw;
+
+	color: var(--input-color);
+}
+
+#chat_input {
+	margin: 0 0 0 0.5vw;
+	width: var(--input-width);
+	height: var(--input-height);
+	border: none;
+	outline: none;
+
+	background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+input[type="text"]#chat_input {
+	font-family: Play;
+	font-size: 1vw;
+	color: var(--input-font-color);
+	padding: 1vw 0.5vw 1vw 0.5vw;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    display: none;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    width: 8px;
+    height: 8px; 
+}

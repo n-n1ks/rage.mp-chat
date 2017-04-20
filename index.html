@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style/checkbox.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="style/main.css" media="screen">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		
+		<div id="rage_cop" style="z-index: 10000; display: block; padding: 10px 34px; line-height: 18px; border-radius: 80px; font-size: 24px; font-family: sans-serif; font-weight: bold; position: absolute; right: 20px; bottom: 20px; -webkit-text-stroke: 
+		1px black;">rage\\0.2</div>
+		
+		<div id="chat">
+			<div id="chat_messages">
+			</div>
+		</div>
+		<input type="text" spellcheck="false" id="chat_input" style="display: none">
+
+		
+		<script>
+		let cop = $("#rage_cop");
+		
+		function k()
+		{
+			cop.fadeIn('slow',
+				function() 
+			{
+				setTimeout(
+					function() 
+				{
+					cop.fadeOut('slow', 
+						function() 
+					{ 
+						setTimeout(k, 300000);
+					}); 
+				}, 15000);
+			});
+		}
+		
+		k();
+		</script>
+		
+		<script src="js/main.js"></script>
+		
+	</body>
+	
+</html>
