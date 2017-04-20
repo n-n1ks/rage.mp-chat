@@ -10,11 +10,11 @@ const max_chat_messages		= 100;
 // Input enbaled.
 let chat_input_enabled		= false;
 // Message counter (default value is -1).
-let message_counter			= -1;
+let message_counter		= -1;
 // Chat enabled.
-let chat_enabled			= true;
+let chat_enabled		= true;
 // Player messages.
-let player_messages			= [];
+let player_messages		= [];
 // Player messages limit.
 const player_messages_limit	= 50;
 // Players current message.
@@ -136,7 +136,7 @@ $(document).keydown(function(e) {
 				player_messages.push(message);
 			
 			if (player_messages.length > player_messages_limit)
-					player_messages.shift();
+				player_messages.shift();
 
 			enableChatInput(false, e);
 
