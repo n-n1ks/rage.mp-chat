@@ -1,8 +1,3 @@
-// Chat loaded.
-$(document).ready(() => {
-	mp.trigger("guiStarted");
-});
-
 // Messages container.
 const messages_container	= $('#chat #chat_messages');
 // Numbers of max chat messages.
@@ -99,6 +94,15 @@ function clearChat(messagesNumber) {
 $(document).on('input', '#chat_input', function() {
 	player_current_message = $(this).val();
 });
+
+
+var chatAPI =
+{
+	push: insertMessageToChat,	
+	clear: clearChat,	
+	activate: enableChatInput,	
+	show: showChat
+};
 
 // Keys listener.
 $(document).keydown(function(e) {
