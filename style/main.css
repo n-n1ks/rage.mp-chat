@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
 	font-family: Play;
-	src: url('fonts/Play-Regular.ttf');
+	src: url('../fonts/Play-Regular.ttf');
 }
 
 /* Variables */
